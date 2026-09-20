@@ -1,0 +1,34 @@
+﻿<Window x:Class="FurnitureManufacturing.Windows.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FurnitureManufacturing.Windows"
+        mc:Ignorable="d"
+        Title="Добавление пользователя" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Логин:"/>
+        <TextBox Name="LoginTb" Grid.Column="2"/>
+        <TextBlock Grid.Row="2" Text="Пароль:"/>
+        <PasswordBox Name="PasswordPb" Grid.Row="2" Grid.Column="2"/>
+        <TextBlock Grid.Row="4" Text="Роль:"/>
+        <TextBox Name="RoleTb" Grid.Row="4" Grid.Column="2"/>
+        <TextBlock Grid.Row="5" Grid.Column="2" FontSize="12" Text="1 - администратор; 2 - пользователь" VerticalAlignment="Top"/>
+        <Button Name="AddUserBtn" Grid.Row="8" Grid.Column="2" Content="Добавить" Click="AddUserBtn_Click"/>
+    </Grid>
+</Window>
